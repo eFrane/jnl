@@ -3,7 +3,9 @@
 #
 # jnl - Journaling for terminal people (pun intended.)
 #
-# Usage: jnl This is a short journal entry
+# jnlread - Read the things you wrote today
+#
+# Usage: jnlread
 # License: MIT
 # By: eFrane
 # "Homepage": https://github.com/eFrane/jnl
