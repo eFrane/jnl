@@ -36,6 +36,11 @@ if [ -z ${journal+x} ];
 then
     return 1;
 else
+    if [ ! -f $journal ];
+    then
+        exit 0
+    fi
+
     if [ $(cat $journal | wc -l) -gt $(tput lines) ];
     then
         $PAGER $journal
