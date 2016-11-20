@@ -1,0 +1,27 @@
+#!/usr/bin/env sh
+#########################################################
+#
+# jnl - Journaling for terminal people (pun intended.)
+#
+# Usage: jnl This is a short journal entry
+# License: MIT
+# By: eFrane
+# "Homepage": https://github.com/eFrane/jnl
+#
+#########################################################
+
+if [ -z ${JNL_HOME+x} ];
+then
+    JNL_HOME=~/.jnl
+fi
+
+if [ $# -eq 1 ];
+then
+    $PAGER $JNL_HOME/$(date +"%Y")/$(date +"%b-%d").txt
+else
+    if [ "$1" = "-h" ];
+    then
+        echo "In the future, more options will be available"
+    fi
+fi
+
