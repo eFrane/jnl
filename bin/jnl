@@ -18,5 +18,5 @@ fi
 JNL_DIR=$JNL_HOME/$(date +"%Y")
 
 mkdir -p $JNL_DIR
-echo $@ | ts "%H:%M" > $JNL_DIR/$(date +"%b-%d").txt
+echo $@ | ts "%H:%M" >> $JNL_DIR/$(date +"%b-%d").txt
 

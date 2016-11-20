@@ -15,9 +15,14 @@ then
     JNL_HOME=~/.jnl
 fi
 
-if [ $# -eq 1 ];
+if [ -z ${PAGER+x} ];
 then
-    $PAGER $JNL_HOME/$(date +"%Y")/$(date +"%b-%d").txt
+    PAGER=less
+fi
+
+if [ $# -eq 0 ];
+then
+    journal=$JNL_HOME/$(date +"%Y")/$(date +"%b-%d").txt
 else
     if [ "$1" = "-h" ];
     then
@@ -25,3 +30,14 @@ else
     fi
 fi
 
+if [ -z ${journal+x} ];
+then
+    return 1;
+else
+    if [ $(cat $journal | wc -l) -gt $(tput lines) ];
+    then
+        $PAGER $journal
+    else
+        cat $journal
+    fi
+fi
