@@ -10,4 +10,4 @@ named `$JNL_HOME/yyyy/mmm-dd.txt` prefixed with the current timestamp.
 
 Example:
 
-[![asciicast](https://asciinema.org/a/cgf327vc3v10l9tvt8xye50o9.png)](https://asciinema.org/a/cgf327vc3v10l9tvt8xye50o9)
+[![asciicast](https://asciinema.org/a/d1lrg1a5dio2xp4vaubtl3r30.png)](https://asciinema.org/a/d1lrg1a5dio2xp4vaubtl3r30)
